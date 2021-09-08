@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+  cursor: default;
+  scrollbar-width: none;
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+    // overflow-y: hidden;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+};
+body {
+  overflow-x: hidden;
+};
+a {
+  text-decoration: none;
+  color: unset;
+  &:visited {
+    color: unset;
+  };
+};
+button {
+  background-color: unset;
+  border: unset;
+}
+
+.flexCtn {
+  display: flex;
+};
+.gridCtn {
+  display: grid;
+}
+.displayNone {
+  display: none;
+}
+.visibilityHidden {
+  visibility: hidden;
+}
+
+.mainCategoriesQueries {
+  @include flexContainerConfig(row, nowrap, space-between, center);
+  @include typoSet ($fw-regular, $fs-categories, $fs-categories, $font-Quest); 
+  .mainCategory {
+    @include flexContainerConfig(row, nowrap, center, center);
+    width: calc(100vw * (106 / 1280));
+    height: calc(100vw * (42 / 1280));
+    color: $mainGray;
+    background-color: $mainWhite;
+    transition: all 0.2s linear;
+    &:hover {
+      color: $mainWhite;
+      background-color: $mainPink;
+      cursor: pointer;
+      a {
+        cursor: pointer;
+      }
+    }
+  }
+}
+.mainCategoriesQueriesSelected {
+  transform: scale(1.1);
+  border: 2px solid $mainPink;
+}
+.button {
+  @include flexContainerConfig(column, nowrap, center, center);
+  @include typoSet ($fw-light, $fs-bannerButton, $ls-bannerButton, $font-Quest);
+  width             : calc(100vw * (170 / 1280));
+  height            : calc(100vw * (40 / 1280));
+  color             : $mainPink;
+  background-color  : $mainWhite;
+  transition        : all 0.2s linear;
+  &:visited {
+    color           : $mainPink;
+  }
+  &:hover {
+    color             : $mainWhite;
+    background-color  : $mainPink;
+    cursor            : pointer;
+    transform         : scale(1.1);
+  }
+}

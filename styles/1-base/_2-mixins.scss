@@ -1,0 +1,8 @@
+@mixin flexContainerConfig($direction, $wrap, $justify, $aligni) {
+  flex-flow: $direction $wrap;
+  justify-content: $justify;
+  align-items: $aligni;
+};
+@mixin typoSet ($fontWeight, $fontSize, $lineHeight, $font) {
+  font: $fontWeight #{$fontSize}/#{$lineHeight} $font;
+}

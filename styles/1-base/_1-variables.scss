@@ -1,0 +1,35 @@
+// *************************************
+// *************** FONTS ***************
+$font-Mont       : 'Montserrat', sans-serif;
+$font-Quest      : 'Questrial', sans-serif;
+// Font Weigth:
+$fw-bold      : 900;
+$fw-medium    : 700;
+$fw-regular   : 400;
+$fw-light     : 300;
+// Font Size:
+$fs-bannerTitle       : calc(100vw * (40 / 1280));
+$fs-bannerText        : calc(100vw * (17 / 1280));
+$fs-bannerButton      : calc(100vw * (14 / 1280));
+$fs-categories        : calc(100vw * (16 / 1280));
+$fs-maskTitle         : calc(100vw * (19 / 1280));
+$fs-maskCategory      : calc(100vw * (20 / 1280));
+$fs-showMeMoreButton  : calc(100vw * (13 / 1280));
+$fs-copyrightText     : calc(100vw * (13 / 1280));
+// Letter Spacing:
+$ls-bannerTitle       : calc(100vw * (12 / 1280));
+$ls-bannerText        : calc(100vw * (3 / 1280));
+$ls-bannerButton      : calc(100vw * (2 / 1280));
+$ls-categories        : calc(100vw * (3 / 1280));
+$ls-maskTitle         : calc(100vw * (6 / 1280));
+$ls-maskCategory      : calc(100vw * (4 / 1280));
+$ls-showMeMoreButton  : calc(100vw * (3 / 1280));
+$ls-copyrightText     : calc(100vw * (3 / 1280));
+// Line Height:
+$lh-bannerText        : calc(100vw * (22 / 1280));
+// *************************************
+// *************** COLORS **************
+$mainPink       : #ff5672;
+$mainWhite      : #fff;
+$mainGray       : #707070;
+$blueishGray    : #c3d0d8;

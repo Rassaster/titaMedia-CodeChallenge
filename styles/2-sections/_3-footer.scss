@@ -1,0 +1,46 @@
+.footer {
+  position  : relative;
+  margin    : 0 0 calc(100vw * (60 / 1280)); 
+  @include flexContainerConfig(column, nowrap, flex-start, center);
+  &__copyright {
+    margin: 0 0 calc(100vw * (50 / 1280));
+    &__text {
+      @include typoSet ($fw-regular, $fs-copyrightText, $fs-copyrightText, $font-Quest);
+      color           : $blueishGray;
+      letter-spacing  : $ls-copyrightText;
+      span {
+        color : $mainPink;
+      }
+    }
+  }
+  &__socialMedia {
+    @include flexContainerConfig(row, nowrap, center, center);
+    &__logoLink {
+      margin    : 0 calc(100vw * (10 / 1280));
+      padding   : calc(100vw * (5 / 1280));
+      width     : calc(100vw * (25 / 1280));
+      height    : calc(100vw * (25 / 1280));
+      &:hover {
+        cursor  : pointer;
+        svg path {
+          fill    : red;
+          cursor  : pointer;
+        }
+      }
+      svg {
+        width   : 100%;
+        height  : 100%;
+        &:hover {
+          cursor  : pointer;
+        }
+      }
+      &:nth-child(5) {
+        width   : calc(100vw * (35 / 1280));
+        height  : calc(100vw * (35 / 1280));
+      }
+    }
+  }
+}
+// *****************************************************************************************************
+// MEDIA QUERIES
+@media screen and (max-width: 425px){}
