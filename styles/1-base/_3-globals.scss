@@ -10,6 +10,7 @@
   /* Hide scrollbar for IE, Edge and Firefox */
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+  scroll-behavior: smooth;
 };
 body {
   overflow-x: hidden;
@@ -79,5 +80,50 @@ button {
     background-color  : $mainPink;
     cursor            : pointer;
     transform         : scale(1.1);
+  }
+}
+// *****************************************************************************************************
+// MEDIA QUERIES
+@media screen and (max-width: 425px) {
+  .mainCategoriesQueries {
+    @include flexContainerConfig(row, nowrap, space-between, center);
+    @include typoSet ($fw-regular, $fs-categoriesMob, $fs-categoriesMob, $font-Quest); 
+    .mainCategory {
+      @include flexContainerConfig(row, nowrap, center, center);
+      margin: calc(100vw * (20 / 425)) 0 0;
+      border-bottom: 2px solid $mainPink;
+      width: 50vw;
+      height: calc(100vw * (42 / 425));
+      color: $mainGray;
+      background-color: rgba(255, 255, 255, 0.3);
+      transition: all 0.2s linear;
+      &:hover {
+        color: $mainWhite;
+        background-color: $mainPink;
+        cursor: pointer;
+      }
+    }
+  }
+  .mainCategoriesQueriesSelected {
+    transform: scale(1.1);
+    border: 1px solid $mainPink;
+  }
+  .button {
+    @include flexContainerConfig(column, nowrap, center, center);
+    @include typoSet ($fw-light, $fs-bannerButtonMob, $ls-bannerButtonMob, $font-Quest);
+    width             : calc(100vw * (170 / 425));
+    height            : calc(100vw * (40 / 425));
+    color             : $mainPink;
+    background-color  : $mainWhite;
+    transition        : all 0.2s linear;
+    &:visited {
+      color           : $mainPink;
+    }
+    &:hover {
+      color             : $mainWhite;
+      background-color  : $mainPink;
+      cursor            : pointer;
+      transform         : scale(1.1);
+    }
   }
 }

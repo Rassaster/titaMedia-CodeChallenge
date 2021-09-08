@@ -1,6 +1,6 @@
 .footer {
   position  : relative;
-  margin    : 0 0 calc(100vw * (60 / 1280)); 
+  top: calc(100vw * (106 / 1280));
   @include flexContainerConfig(column, nowrap, flex-start, center);
   &__copyright {
     margin: 0 0 calc(100vw * (50 / 1280));
@@ -15,6 +15,7 @@
   }
   &__socialMedia {
     @include flexContainerConfig(row, nowrap, center, center);
+    margin    : 0 0 calc(100vw * (60 / 1280)); 
     &__logoLink {
       margin    : 0 calc(100vw * (10 / 1280));
       padding   : calc(100vw * (5 / 1280));
@@ -43,4 +44,49 @@
 }
 // *****************************************************************************************************
 // MEDIA QUERIES
-@media screen and (max-width: 425px){}
+@media screen and (max-width: 425px){
+  .footer {
+    top: calc(100vw * (100 / 425));
+    margin    : 0 0 calc(100vw * (100 / 425)); 
+    @include flexContainerConfig(column, nowrap, flex-start, center);
+    &__copyright {
+      &__text {
+        @include typoSet ($fw-regular, $fs-copyrightTextMob, $fs-copyrightTextMob, $font-Quest);
+        color           : $blueishGray;
+        letter-spacing  : $ls-copyrightTextMob;
+        span {
+          color : $mainPink;
+        }
+      }
+    }
+    &__socialMedia {
+      margin: 0 0 calc(100vw * (50 / 425));
+      @include flexContainerConfig(row, nowrap, center, center);
+      &__logoLink {
+        margin    : 0 calc(100vw * (10 / 425));
+        padding   : calc(100vw * (5 / 425));
+        width     : calc(100vw * (25 / 425));
+        height    : calc(100vw * (25 / 425));
+        &:hover {
+          cursor  : pointer;
+          svg path {
+            fill    : red;
+            cursor  : pointer;
+          }
+        }
+        svg {
+          width   : 100%;
+          height  : 100%;
+          &:hover {
+            cursor  : pointer;
+          }
+        }
+        &:nth-child(5) {
+          width   : calc(100vw * (35 / 425));
+          height  : calc(100vw * (35 / 425));
+        }
+      }
+    }
+  }
+
+}

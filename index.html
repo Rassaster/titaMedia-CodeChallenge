@@ -12,12 +12,13 @@
   <title>Sneak | Creative Portfolio</title>
 </head>
 <body>
+  <span id="topAgain"></span>
   <header class="header flexCtn" >
-    <a class="header__logo" href="index.html">
+    <a class="header__logo" href="#topAgain">
       <img src="./assets/logos/sneakLogo.png" alt="Logo">
     </a>
     <!-- Desktop Nav -->
-    <nav class="header__nav">
+    <nav class="header__desktopNav">
       <ul class="mainCategoriesQueries flexCtn">
         <li class="mainCategory flexCtn"><a href="">All</a></li>
         <li class="mainCategory flexCtn"><a href="">Branding</a></li>
@@ -31,6 +32,21 @@
       </ul>
     </nav>
     <!-- Mobile Nav -->
+    <div id="openHamurger" class="header__hamburger"></div>
+    <div id="closeHamurger" class="header__hamburger"></div>
+    <nav class="header__mobileNav">
+      <ul class="mainCategoriesQueries flexCtn">
+        <li class="search flexCtn">
+          <button id="searchtButton" class="search__button"></button>
+          <input id="searchInput" class="search__input" type="text" name="searchTerm" placeholder="Write your query...">
+        </li>
+        <li class="mainCategory flexCtn"><a href="">All</a></li>
+        <li class="mainCategory flexCtn"><a href="">Branding</a></li>
+        <li class="mainCategory flexCtn"><a href="">Web</a></li>
+        <li class="mainCategory flexCtn"><a href="">Photography</a></li>
+        <li class="mainCategory flexCtn"><a href="">App</a></li>
+      </ul>
+    </nav>
   </header>
   <main class="main">
     <div class="main__banner flexCtn">
@@ -55,12 +71,18 @@
       <div class=" main__gallery__display gridGallery">
 
         <div class="main__gallery__display__imgCtn  flexCtn">
-          <div class="main__gallery__display__imgCtn__mask  flexCtn"></div>
+          <div class="main__gallery__display__imgCtn__mask  flexCtn">
+            <h3>CREATIVE LOGO</h3>
+            <h4>Branding</h4>
+          </div>
           <img class="main__gallery__display__imgCtn__srcImg " src="https://source.unsplash.com/random" alt="">
         </div>
 
         <div class="main__gallery__display__imgCtn  flexCtn">
-          <div class="main__gallery__display__imgCtn__mask  flexCtn"></div>
+          <div class="main__gallery__display__imgCtn__mask  flexCtn">
+            <h3>CREATIVE LOGO</h3>
+            <h4>Branding</h4>
+          </div>
           <img class="main__gallery__display__imgCtn__srcImg " src="https://source.unsplash.com/user/erondu" alt="">
         </div>
 

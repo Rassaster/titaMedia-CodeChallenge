@@ -7,7 +7,7 @@ $fw-bold      : 900;
 $fw-medium    : 700;
 $fw-regular   : 400;
 $fw-light     : 300;
-// Font Size:
+// Font Size Desktop:
 $fs-bannerTitle       : calc(100vw * (40 / 1280));
 $fs-bannerText        : calc(100vw * (17 / 1280));
 $fs-bannerButton      : calc(100vw * (14 / 1280));
@@ -16,7 +16,7 @@ $fs-maskTitle         : calc(100vw * (19 / 1280));
 $fs-maskCategory      : calc(100vw * (20 / 1280));
 $fs-showMeMoreButton  : calc(100vw * (13 / 1280));
 $fs-copyrightText     : calc(100vw * (13 / 1280));
-// Letter Spacing:
+// Letter Spacing Desktop:
 $ls-bannerTitle       : calc(100vw * (12 / 1280));
 $ls-bannerText        : calc(100vw * (3 / 1280));
 $ls-bannerButton      : calc(100vw * (2 / 1280));
@@ -25,11 +25,32 @@ $ls-maskTitle         : calc(100vw * (6 / 1280));
 $ls-maskCategory      : calc(100vw * (4 / 1280));
 $ls-showMeMoreButton  : calc(100vw * (3 / 1280));
 $ls-copyrightText     : calc(100vw * (3 / 1280));
-// Line Height:
+// Line Height Desktop:
 $lh-bannerText        : calc(100vw * (22 / 1280));
+// Font Size Mobile:
+$fs-bannerTitleMob       : calc(100vw * (40 / 425));
+$fs-bannerTextMob        : calc(100vw * (17 / 425));
+$fs-bannerButtonMob      : calc(100vw * (14 / 425));
+$fs-categoriesMob        : calc(100vw * (16 / 425));
+$fs-maskTitleMob         : calc(100vw * (19 / 425));
+$fs-maskCategoryMob      : calc(100vw * (20 / 425));
+$fs-showMeMoreButtonMob  : calc(100vw * (13 / 425));
+$fs-copyrightTextMob     : calc(100vw * (13 / 425));
+// Letter Spacing Mobile:
+$ls-bannerTitleMob       : calc(100vw * (12 / 425));
+$ls-bannerTextMob        : calc(100vw * (3 / 425));
+$ls-bannerButtonMob      : calc(100vw * (2 / 425));
+$ls-categoriesMob        : calc(100vw * (3 / 425));
+$ls-maskTitleMob         : calc(100vw * (6 / 425));
+$ls-maskCategoryMob      : calc(100vw * (4 / 425));
+$ls-showMeMoreButtonMob  : calc(100vw * (3 / 425));
+$ls-copyrightTextMob     : calc(100vw * (3 / 425));
+// Line Height Mobile:
+$lh-bannerTextMob        : calc(100vw * (22 / 425));
 // *************************************
 // *************** COLORS **************
 $mainPink       : #ff5672;
 $mainWhite      : #fff;
 $mainGray       : #707070;
 $blueishGray    : #c3d0d8;
+$pinkyshGray    : #ff5672ab;

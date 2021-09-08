@@ -1,5 +1,7 @@
 .main{
   position: relative;
+  overflow-x: hidden;
+  top: calc(100vw * (106 / 1280));
   &__banner {
     @include flexContainerConfig(column, nowrap, flex-start, center);
     height        : 100vh;
@@ -18,7 +20,7 @@
       color           : $mainWhite;
     }
     &__anchorBtn {
-      margin  : calc(100vw * (60 / 1280)) 0 calc(100vw * (25 / 1280)) 0;
+      margin  : calc(100vw * (40 / 1280)) 0 calc(100vw * (25 / 1280)) 0;
     }
   }
   &__gallery {
@@ -81,12 +83,28 @@
           display : flex;
         }
         &__mask {
+          @include flexContainerConfig(column, nowrap, center, center);
           display           : none;
           position          : absolute;
           top               : 0;
           width             : 100%;
           height            : 100%;
-          background-color  : rgba(0, 255, 255, 0.268);
+          background-color  : $pinkyshGray;
+          color: $mainWhite;
+          h3 {
+            @include typoSet ($fw-medium, $fs-maskTitle, $fs-maskTitle, $font-Mont);
+            padding: 0 0 5%;
+            width: 80%;
+            border-bottom: 2px solid $mainWhite;
+            letter-spacing: $ls-maskTitle;
+            text-align: center;
+
+          }
+          h4 {
+            @include typoSet ($fw-regular, $fs-maskCategory, $fs-maskCategory, $font-Mont);
+            padding: 5% 0 0;
+            letter-spacing: $ls-maskCategory;
+          }
         }
         &__srcImg {
           width: 100%;
@@ -153,4 +171,95 @@
 // *****************************************************************************************************
 // MEDIA QUERIES
 @media screen and (max-width: 425px){
+  .main{
+    top: calc(100vw * (100 / 425));
+    &__banner {
+      background    : url(../assets/images/bannerLandscapeMobile-NicolasJossi.jpg) center / cover no-repeat fixed;
+      &__title {
+        @include typoSet ($fw-medium, $fs-bannerTitleMob, $fs-bannerTitleMob, $font-Mont);
+        margin          : calc(100vw * (80 / 425)) 0 calc(100vw * (40 / 425));
+        width           : 100vw;
+        letter-spacing  : $ls-bannerTitleMob;
+      }
+      &__text {
+        @include typoSet ($fw-light, $fs-bannerTextMob, $lh-bannerTextMob, $font-Quest);
+        width: 80vw;
+        margin: 0 0 calc(100vw * (20 / 425));
+        letter-spacing  : $ls-bannerTextMob;
+      }
+      &__anchorBtn {
+        margin  : calc(100vw * (50 / 425)) 0 calc(100vw * (5 / 425)) 0;
+      }
+    }
+    &__gallery {
+      @include flexContainerConfig(column, nowrap, flex-start, center);
+      margin    : calc(100vw * (70 / 425)) 0 0;
+      &__displayModes {
+        @include flexContainerConfig(row, nowrap, center, center);
+        margin    : 0 0 calc(100vw * (40 / 425)) 0;
+        width     : 100vw;
+        .displayMode {
+          margin        : 0 calc(100vw * (12 / 425));
+          width         : calc(100vw * (14 / 425));
+          height        : calc(100vw * (14 / 425));
+          filter: grayscale(100%);
+        }
+        &__gridMode {
+          background : url(../assets/controls/gridIcon.png) center / cover no-repeat;
+        }
+        &__flexMode {
+          background : url(../assets/controls/flexIcon.png) center / cover no-repeat;
+        }
+      }
+      &__mainCategories {
+        @include flexContainerConfig(column, nowrap, flex-start, center);
+        margin    : 0 0 calc(100vw * (60 / 425)) 0;
+        .mainCategory {
+          border: unset;
+          height: calc(100vw * (45 / 425));
+        }
+      }
+      .flexGallery, .gridGallery {
+        display: flex;
+        @include flexContainerConfig(column, nowrap, flex-start, center);
+        .main__gallery__display__imgCtn {
+          width: calc(100vw * (400 / 425)); 
+          height: calc(100vw * (550 / 425)); 
+        }
+      }
+      &__display {
+        display: flex;
+        width                 : calc(100vw * (370 / 425));
+        margin                : 0 0 calc(100vw * (24 / 425)) 0;
+        grid-template-rows    : repeat(7, calc(100vw * (180 / 425)));
+        gap                   : calc(100vw * (24 / 425));
+        &__imgCtn {
+          width : calc(100vw * (367 / 425));
+          h3 {
+            @include typoSet ($fw-medium, $fs-maskTitleMob, $fs-maskTitleMob, $font-Mont);
+            letter-spacing: $ls-maskTitleMob;
+
+          }
+          h4 {
+            @include typoSet ($fw-regular, $fs-maskCategoryMob, $fs-maskCategoryMob, $font-Mont);
+            letter-spacing: $ls-maskCategoryMob;
+          }
+        }
+      }
+      &__showMore {
+        margin    :  calc(100vw * (20 / 425)) 0 calc(100vw * (60 / 425));
+        font-size: $fs-showMeMoreButtonMob;
+        letter-spacing: $ls-showMeMoreButtonMob;
+        &__button {
+          color             : $mainWhite;
+          background-color  : $mainPink;
+          &:hover {
+            border            : 1px solid $mainPink;
+            color             : $mainPink;
+            background-color  : $mainWhite;
+          }
+        }
+      }
+    }
+  }
 }
