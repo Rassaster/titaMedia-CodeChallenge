@@ -51,9 +51,65 @@
       margin    : 0 0 calc(100vw * (60 / 1280)) 0;
     }
     &__display {
-      border    : 1px solid red;
       width     : calc(100vw * (1152 / 1280));
-      height    : calc(100vw * (1400 / 1280));
+      margin    : 0 0 calc(100vw * (24 / 1280)) 0;
+      grid-template-columns: repeat(3, 1fr) ;
+      grid-template-rows: repeat(7, calc(100vw * (180 / 1280)));
+      gap: calc(100vw * (24 / 1280));
+      grid-auto-flow: dense;
+      &__imgCtn {
+        position: relative;
+        width: calc(100vw * (367 / 1280));
+        &__mask {
+          position: absolute;
+          top: 0;
+          background-color: rgba(0, 255, 255, 0.268);
+        }
+        &__srcImg {
+          width: 100%;
+          height: 100%;
+        }
+        &:nth-child(1) {
+          grid-column: 1/2;
+          grid-row:span 2;
+        }
+        &:nth-child(2) {
+          grid-column: 2/3;
+          grid-row: span 1;
+        }
+        &:nth-child(3) {
+          grid-column: 3/4;
+          grid-row: span 3;
+        }
+        &:nth-child(4) {
+          grid-column: 1/2;
+          grid-row: span 3;
+        }
+        &:nth-child(5) {
+          grid-column: 2/3;
+          grid-row: span 3;
+        }
+        &:nth-child(6) {
+          grid-column: 3/4;
+          grid-row: span 1;
+        }
+        &:nth-child(7) {
+          grid-column: 1/2;
+          grid-row: span 2;
+        }
+        &:nth-child(8) {
+          grid-column: 2/3;
+          grid-row: span 3;
+        }
+        &:nth-child(9) {
+          grid-column: 3/4;
+          grid-row:  span 1;
+        }
+        &:nth-child(10) {
+          grid-column: 3/4;
+          grid-row: span 2;
+        }
+      }
     }
     &__showMore {
       margin    :  calc(100vw * (80 / 1280)) 0;

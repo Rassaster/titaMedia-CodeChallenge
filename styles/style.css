@@ -359,9 +359,100 @@ button {
 }
 
 .main__gallery__display {
-  border: 1px solid red;
   width: calc(100vw * (1152 / 1280));
-  height: calc(100vw * (1400 / 1280));
+  margin: 0 0 calc(100vw * (24 / 1280)) 0;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (calc(100vw * (180 / 1280)))[7];
+      grid-template-rows: repeat(7, calc(100vw * (180 / 1280)));
+  gap: calc(100vw * (24 / 1280));
+  grid-auto-flow: dense;
+}
+
+.main__gallery__display__imgCtn {
+  position: relative;
+  width: calc(100vw * (367 / 1280));
+}
+
+.main__gallery__display__imgCtn__mask {
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 255, 255, 0.268);
+}
+
+.main__gallery__display__imgCtn__srcImg {
+  width: 100%;
+  height: 100%;
+}
+
+.main__gallery__display__imgCtn:nth-child(1) {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  grid-row: span 2;
+}
+
+.main__gallery__display__imgCtn:nth-child(2) {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  grid-row: span 1;
+}
+
+.main__gallery__display__imgCtn:nth-child(3) {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  grid-row: span 3;
+}
+
+.main__gallery__display__imgCtn:nth-child(4) {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  grid-row: span 3;
+}
+
+.main__gallery__display__imgCtn:nth-child(5) {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  grid-row: span 3;
+}
+
+.main__gallery__display__imgCtn:nth-child(6) {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  grid-row: span 1;
+}
+
+.main__gallery__display__imgCtn:nth-child(7) {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  grid-row: span 2;
+}
+
+.main__gallery__display__imgCtn:nth-child(8) {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  grid-row: span 3;
+}
+
+.main__gallery__display__imgCtn:nth-child(9) {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  grid-row: span 1;
+}
+
+.main__gallery__display__imgCtn:nth-child(10) {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  grid-row: span 2;
 }
 
 .main__gallery__showMore {
