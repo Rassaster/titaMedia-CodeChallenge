@@ -12,39 +12,39 @@
   <title>Sneak | Creative Portfolio</title>
 </head>
 <body>
-  <span id="topAgain"></span>
+  <span id="scrollTop"></span>
   <header class="header flexCtn" >
-    <a class="header__logo" href="#topAgain">
+    <a class="header__logo" href="#scrollTop">
       <img src="./assets/logos/sneakLogo.png" alt="Logo">
     </a>
     <!-- Desktop Nav -->
     <nav class="header__desktopNav">
       <ul class="mainCategoriesQueries flexCtn">
-        <li class="mainCategory flexCtn"><a href="">All</a></li>
-        <li class="mainCategory flexCtn"><a href="">Branding</a></li>
-        <li class="mainCategory flexCtn"><a href="">Web</a></li>
-        <li class="mainCategory flexCtn"><a href="">Photography</a></li>
-        <li class="mainCategory flexCtn"><a href="">App</a></li>
-        <li class="search flexCtn">
-          <button id="searchtButton" class="search__button"></button>
-          <input id="searchInput" class="search__input" type="text" name="searchTerm" placeholder="Write your query...">
+        <li class="mainCategory flexCtn"><a class="trigFetch mainCategoriesQueriesSelected" href="#scrollToGallery">All</a></li>
+        <li class="mainCategory flexCtn"><a class="trigFetch" href="#scrollToGallery">Branding</a></li>
+        <li class="mainCategory flexCtn"><a class="trigFetch" href="#scrollToGallery">Web</a></li>
+        <li class="mainCategory flexCtn"><a class="trigFetch" href="#scrollToGallery">Photography</a></li>
+        <li class="mainCategory flexCtn"><a class="trigFetch" href="#scrollToGallery">App</a></li>
+        <li id="searchDesktop" class="search flexCtn">
+          <button id="searchtButtonDesktop" class="search__button"></button>
+          <input id="searchInputDesktop" class="search__input" type="text" name="searchTerm" placeholder="Write your query...">
         </li>
       </ul>
     </nav>
     <!-- Mobile Nav -->
     <div id="openHamurger" class="header__hamburger"></div>
     <div id="closeHamurger" class="header__hamburger"></div>
-    <nav class="header__mobileNav">
+    <nav id="mobileNav" class="header__mobileNav">
       <ul class="mainCategoriesQueries flexCtn">
         <li class="search flexCtn">
-          <button id="searchtButton" class="search__button"></button>
-          <input id="searchInput" class="search__input" type="text" name="searchTerm" placeholder="Write your query...">
+          <button id="searchtButtonMob" class="search__button"></button>
+          <input id="searchInputMob" class="search__input" type="text" name="searchTerm" placeholder="Write your query...">
         </li>
-        <li class="mainCategory flexCtn"><a href="">All</a></li>
-        <li class="mainCategory flexCtn"><a href="">Branding</a></li>
-        <li class="mainCategory flexCtn"><a href="">Web</a></li>
-        <li class="mainCategory flexCtn"><a href="">Photography</a></li>
-        <li class="mainCategory flexCtn"><a href="">App</a></li>
+        <li class="mainCategory flexCtn"><a class="trigFetch mainCategoriesQueriesSelected" href="#scrollToGallery">All</a></li>
+        <li class="mainCategory flexCtn"><a class="trigFetch" href="#scrollToGallery">Branding</a></li>
+        <li class="mainCategory flexCtn"><a class="trigFetch" href="#scrollToGallery">Web</a></li>
+        <li class="mainCategory flexCtn"><a class="trigFetch" href="#scrollToGallery">Photography</a></li>
+        <li class="mainCategory flexCtn"><a class="trigFetch" href="#scrollToGallery">App</a></li>
       </ul>
     </nav>
   </header>
@@ -53,142 +53,35 @@
       <h1 class="main__banner__title">EXPLORE BEYOND HORIZON</h1>
       <p class="main__banner__text">Magna mundi referrentur quo, no rebum dignissim qui.</p>
       <p class="main__banner__text">Per quodsi accusata id, agam labores.</p>
-      <a href="#" class="main__banner__anchorBtn button flexCtn">View our work</a>
+      <a href="#scrollToGallery" class="main__banner__anchorBtn button flexCtn">View our work</a>
     </div>
     <div class="main__gallery flexCtn">
+      <span id="scrollToGallery"></span>
       <div class="main__gallery__displayModes flexCtn">
         <div class="main__gallery__displayModes__gridMode displayMode"></div>
         <div class="main__gallery__displayModes__flexMode displayMode"></div>
       </div>
       <div class="main__gallery__mainCategories mainCategoriesQueries flexCtn">
-        <button class="main__gallery__mainCategories__selector mainCategory ">All</button>
-        <button class="main__gallery__mainCategories__selector mainCategory">Branding</button>
-        <button class="main__gallery__mainCategories__selector mainCategory">Web</button>
-        <button class="main__gallery__mainCategories__selector mainCategory">Photography</button>
-        <button class="main__gallery__mainCategories__selector mainCategory">App</button>
+        <button class="main__gallery__mainCategories__selector mainCategory"> 
+          <a class="trigFetch mainCategoriesQueriesSelected" href="#scrollToGallery">All</a>
+        </button>
+        <button class="main__gallery__mainCategories__selector mainCategory">
+          <a class="trigFetch" href="#scrollToGallery">Branding</a>
+        </button>
+        <button class="main__gallery__mainCategories__selector mainCategory">
+          <a class="trigFetch" href="#scrollToGallery">Web</a>
+        </button>
+        <button class=" main__gallery__mainCategories__selector mainCategory">
+          <a class="trigFetch" href="#scrollToGallery">Photography</a>
+        </button>
+        <button class=" main__gallery__mainCategories__selector mainCategory">
+          <a class="trigFetch" href="#scrollToGallery">App</a>
+        </button>
       </div>
-      
-      <div class=" main__gallery__display gridGallery">
-
-        <div class="main__gallery__display__imgCtn  flexCtn">
-          <div class="main__gallery__display__imgCtn__mask  flexCtn">
-            <h3>CREATIVE LOGO</h3>
-            <h4>Branding</h4>
-          </div>
-          <img class="main__gallery__display__imgCtn__srcImg " src="https://source.unsplash.com/random" alt="">
-        </div>
-
-        <div class="main__gallery__display__imgCtn  flexCtn">
-          <div class="main__gallery__display__imgCtn__mask  flexCtn">
-            <h3>CREATIVE LOGO</h3>
-            <h4>Branding</h4>
-          </div>
-          <img class="main__gallery__display__imgCtn__srcImg " src="https://source.unsplash.com/user/erondu" alt="">
-        </div>
-
-        <div class="main__gallery__display__imgCtn  flexCtn">
-          <div class="main__gallery__display__imgCtn__mask  flexCtn"></div>
-          <img class="main__gallery__display__imgCtn__srcImg " src="https://source.unsplash.com/daily" alt="">
-        </div>
-
-        <div class="main__gallery__display__imgCtn  flexCtn">
-          <div class="main__gallery__display__imgCtn__mask  flexCtn"></div>
-          <img class="main__gallery__display__imgCtn__srcImg " src="https://source.unsplash.com/random" alt="">
-        </div>
-
-        <div class="main__gallery__display__imgCtn  flexCtn">
-          <div class="main__gallery__display__imgCtn__mask  flexCtn"></div>
-          <img class="main__gallery__display__imgCtn__srcImg " src="https://source.unsplash.com/random" alt="">
-        </div>
-
-        <div class="main__gallery__display__imgCtn  flexCtn">
-          <div class="main__gallery__display__imgCtn__mask  flexCtn"></div>
-          <img class="main__gallery__display__imgCtn__srcImg " src="https://source.unsplash.com/random" alt="">
-        </div>
-
-        <div class="main__gallery__display__imgCtn  flexCtn">
-          <div class="main__gallery__display__imgCtn__mask  flexCtn"></div>
-          <img class="main__gallery__display__imgCtn__srcImg " src="https://source.unsplash.com/random" alt="">
-        </div>
-
-        <div class="main__gallery__display__imgCtn  flexCtn">
-          <div class="main__gallery__display__imgCtn__mask  flexCtn"></div>
-          <img class="main__gallery__display__imgCtn__srcImg " src="https://source.unsplash.com/random" alt="">
-        </div>
-
-        <div class="main__gallery__display__imgCtn  flexCtn">
-          <div class="main__gallery__display__imgCtn__mask  flexCtn"></div>
-          <img class="main__gallery__display__imgCtn__srcImg " src="https://source.unsplash.com/random" alt="">
-        </div>
-
-        <div class="main__gallery__display__imgCtn  flexCtn">
-          <div class="main__gallery__display__imgCtn__mask  flexCtn"></div>
-          <img class="main__gallery__display__imgCtn__srcImg " src="https://source.unsplash.com/random" alt="">
-        </div>
-
-    
-        
-      </div>
-
-      <div class=" main__gallery__display gridGallery">
-
-        <div class="main__gallery__display__imgCtn  flexCtn">
-          <div class="main__gallery__display__imgCtn__mask  flexCtn"></div>
-          <img class="main__gallery__display__imgCtn__srcImg " src="https://source.unsplash.com/random" alt="">
-        </div>
-
-        <div class="main__gallery__display__imgCtn  flexCtn">
-          <div class="main__gallery__display__imgCtn__mask  flexCtn"></div>
-          <img class="main__gallery__display__imgCtn__srcImg " src="https://source.unsplash.com/user/erondu" alt="">
-        </div>
-
-        <div class="main__gallery__display__imgCtn  flexCtn">
-          <div class="main__gallery__display__imgCtn__mask  flexCtn"></div>
-          <img class="main__gallery__display__imgCtn__srcImg " src="https://source.unsplash.com/daily" alt="">
-        </div>
-
-        <div class="main__gallery__display__imgCtn  flexCtn">
-          <div class="main__gallery__display__imgCtn__mask  flexCtn"></div>
-          <img class="main__gallery__display__imgCtn__srcImg " src="https://source.unsplash.com/random" alt="">
-        </div>
-
-        <div class="main__gallery__display__imgCtn  flexCtn">
-          <div class="main__gallery__display__imgCtn__mask  flexCtn"></div>
-          <img class="main__gallery__display__imgCtn__srcImg " src="https://source.unsplash.com/random" alt="">
-        </div>
-
-        <div class="main__gallery__display__imgCtn  flexCtn">
-          <div class="main__gallery__display__imgCtn__mask  flexCtn"></div>
-          <img class="main__gallery__display__imgCtn__srcImg " src="https://source.unsplash.com/random" alt="">
-        </div>
-
-        <div class="main__gallery__display__imgCtn  flexCtn">
-          <div class="main__gallery__display__imgCtn__mask  flexCtn"></div>
-          <img class="main__gallery__display__imgCtn__srcImg " src="https://source.unsplash.com/random" alt="">
-        </div>
-
-        <div class="main__gallery__display__imgCtn  flexCtn">
-          <div class="main__gallery__display__imgCtn__mask  flexCtn"></div>
-          <img class="main__gallery__display__imgCtn__srcImg " src="https://source.unsplash.com/random" alt="">
-        </div>
-
-        <div class="main__gallery__display__imgCtn  flexCtn">
-          <div class="main__gallery__display__imgCtn__mask  flexCtn"></div>
-          <img class="main__gallery__display__imgCtn__srcImg " src="https://source.unsplash.com/random" alt="">
-        </div>
-
-        <div class="main__gallery__display__imgCtn  flexCtn">
-          <div class="main__gallery__display__imgCtn__mask  flexCtn"></div>
-          <img class="main__gallery__display__imgCtn__srcImg " src="https://source.unsplash.com/random" alt="">
-        </div>
-
-    
-        
-      </div>
-
-      <div class="main__gallery__showMore flexCtn">
-        <button class="main__gallery__showMore__button button flexCtn">Show Me More</button>
-      </div>
+      <div id="galleryContainer"></div>
+    </div>
+    <div class="main__showMore flexCtn">
+      <button id="showMeMoreBtn"class="main__showMore__button button flexCtn">Show Me More</button>
     </div>
   </main>
   <footer class="footer flexCtn">
@@ -228,5 +121,6 @@
       </a>
     </div>
   </footer>
+  <script type="module" src="./src/main.js"></script>
 </body>
 </html>

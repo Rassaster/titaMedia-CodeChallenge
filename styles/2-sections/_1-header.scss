@@ -20,6 +20,12 @@
   &__desktopNav .mainCategoriesQueries {
     @include flexContainerConfig(row, nowrap, space-between, center);
     width   : fit-content;
+    a {
+      @include flexContainerConfig(row, nowrap, center, center);
+      display   : flex;
+      width     : 100%;
+      height    : 100%;
+    }
     .search {
       @include flexContainerConfig(row, nowrap, space-between, center);
       &__button {
@@ -42,8 +48,8 @@
         width           : calc(100vw * (150 / 1280));
         height          : calc(100vw * (30 / 1280));
         text-align      : center;
-        border-width: 0;
-        width: 0;
+        border-width    : 0;
+        width           : 0;
         transition: all 0.3s linear;
         &::placeholder {
           font-size: $fs-showMeMoreButton ;
@@ -114,6 +120,12 @@
       .mainCategoriesQueries {
         @include flexContainerConfig(column, nowrap, center, center);
         width: 100vw;
+        a {
+          @include flexContainerConfig(row, nowrap, center, center);
+          display   : flex;
+          width     : 100%;
+          height    : 100%;
+        }
         .search {
           @include flexContainerConfig(row, nowrap, center, center);
           width: 100vw;

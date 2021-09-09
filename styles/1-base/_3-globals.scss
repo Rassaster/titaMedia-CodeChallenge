@@ -45,6 +45,7 @@ button {
   @include typoSet ($fw-regular, $fs-categories, $fs-categories, $font-Quest); 
   .mainCategory {
     @include flexContainerConfig(row, nowrap, center, center);
+    margin: 0 0.5%;
     width: calc(100vw * (106 / 1280));
     height: calc(100vw * (42 / 1280));
     color: $mainGray;
@@ -61,8 +62,14 @@ button {
   }
 }
 .mainCategoriesQueriesSelected {
-  transform: scale(1.1);
-  border: 2px solid $mainPink;
+  transform: scale(1.04);
+  background-color: $mainPink;
+  &:visited {
+    color: $mainWhite;
+  }
+}
+.trigFetch {
+  transition: all 0.2s ease;
 }
 .button {
   @include flexContainerConfig(column, nowrap, center, center);
