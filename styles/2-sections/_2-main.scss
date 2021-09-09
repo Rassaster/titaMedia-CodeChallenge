@@ -24,6 +24,7 @@
     }
   }
   &__gallery {
+    transition: all 0.5s linear;
     #scrollToGallery {
       position: absolute;
       top: calc(100vw * (-161 / 1280));

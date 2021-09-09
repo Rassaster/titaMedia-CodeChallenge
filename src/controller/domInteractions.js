@@ -29,7 +29,7 @@ showMeMoreBtn.addEventListener("click", () => {
   globalPage++;
   triggerShowMoreImagesDOM(globalQuery, globalPage);
 })
-//  Desktop Interactions
+//  DESKTOP INTERACTIONS
 const searchDesktop = document.querySelector("#searchDesktop");
 const searchtButtonDesktop = document.querySelector("#searchtButtonDesktop");
 const searchInputDesktop = document.querySelector("#searchInputDesktop");
@@ -60,6 +60,24 @@ searchtButtonDesktop.addEventListener("click", () => {
   mainCategoriesTags.forEach(element => {
     removeClass(element, "mainCategoriesQueriesSelected");
   });
+})
+// Select Gallery display: grid or blocks.
+const gridDisplayModeBtn = document.querySelector("#gridDisplayModeBtn");
+const flexDisplayModeBtn = document.querySelector("#flexDisplayModeBtn");
+gridDisplayModeBtn.addEventListener("click", () => {
+  const galleryDislpayTags = Array.from(document.querySelectorAll(".main__gallery__display"));
+  lg(galleryDislpayTags);
+  galleryDislpayTags.forEach(element => {
+    addClass(element, "gridGallery");
+    removeClass(element, "flexGallery");
+  })
+})
+flexDisplayModeBtn.addEventListener("click", () => {
+  const galleryDislpayTags = Array.from(document.querySelectorAll(".main__gallery__display"));
+  galleryDislpayTags.forEach(element => {
+    addClass(element, "flexGallery");
+    removeClass(element, "gridGallery");
+  })
 })
 //  MOBILE INTERACTIONS
 //  Hamburguer Menu:

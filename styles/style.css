@@ -570,6 +570,8 @@ button {
 }
 
 .main__gallery {
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
   position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
