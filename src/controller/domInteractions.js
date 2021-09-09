@@ -1,16 +1,14 @@
-const lg = console.log;
 import { triggerDisplayImagesDOM, triggerShowMoreImagesDOM } from "./../views/dynamicImages.js";
 import { addClass, removeClass } from "./../model/helpers.js";
+//  GLOBAL VARIABLES 
+let globalQuery           = "All";
+let globalPage            = 1;
+let globalGalleryDisplay  = "gridGallery";
 
-//  Global Variables 
-let globalQuery = "All";
-let globalPage = 1;
-let globalGalleryDisplay = "gridGallery";
-
-//  Global DOM Elements
-const showMeMoreBtn = document.querySelector("#showMeMoreBtn");
-const mainCategoriesTags = Array.from(document.querySelectorAll(".trigFetch"));
-
+//  GLOBAL DOM ELEMENTS
+const showMeMoreBtn       = document.querySelector("#showMeMoreBtn");
+const mainCategoriesTags  = Array.from(document.querySelectorAll(".trigFetch"));
+//  Trigger search of main categories:
 document.addEventListener("click", e => {
   if (e.target.classList[0] === "trigFetch") {
     let localQuery = e.target.innerText;
@@ -26,22 +24,28 @@ document.addEventListener("click", e => {
     e.target.classList[1] === "mobileAnchor" ? closeMobileNav() : null;
   }
 })
+//  Trigger search of new pages of the current query term:
 showMeMoreBtn.addEventListener("click", () => {
   globalPage++;
   triggerShowMoreImagesDOM(globalQuery, globalPage, globalGalleryDisplay);
 })
+//  ******************************************************************************************
 //  DESKTOP INTERACTIONS
-const searchDesktop = document.querySelector("#searchDesktop");
-const searchtButtonDesktop = document.querySelector("#searchtButtonDesktop");
-const searchInputDesktop = document.querySelector("#searchInputDesktop");
+//  Search elements and functions:
+const searchDesktop         = document.querySelector("#searchDesktop");
+const searchtButtonDesktop  = document.querySelector("#searchtButtonDesktop");
+const searchInputDesktop    = document.querySelector("#searchInputDesktop");
+//  Display input element on "mouseenter" event:
 searchDesktop.addEventListener("mouseenter", () => {
   searchInputDesktop.style.width = "calc(100vw * (150 / 1280))";
   searchInputDesktop.style.border = "1px solid $mainPink";
 })
+//  Hide input element on "mouseleave" event:
 searchDesktop.addEventListener("mouseleave", () => {
   searchInputDesktop.style.width = "0";
   searchInputDesktop.style.borderWidth = "0";
 })
+//  Trigger search by pressing the "Enter" key:
 searchInputDesktop.addEventListener("keypress", (e) => {
   if(e.key === "Enter") {
     triggerDisplayImagesDOM(searchInputDesktop.value, globalGalleryDisplay);
@@ -53,6 +57,7 @@ searchInputDesktop.addEventListener("keypress", (e) => {
     });
   }
 })
+//  Trigger search by clicking the search button:
 searchtButtonDesktop.addEventListener("click", () => {
   triggerDisplayImagesDOM(searchInputDesktop.value, globalGalleryDisplay);
   globalQuery = searchInputDesktop.value;
@@ -62,9 +67,9 @@ searchtButtonDesktop.addEventListener("click", () => {
     removeClass(element, "mainCategoriesQueriesSelected");
   });
 })
-// Select Gallery display: grid or blocks.
-const gridDisplayModeBtn = document.querySelector("#gridDisplayModeBtn");
-const flexDisplayModeBtn = document.querySelector("#flexDisplayModeBtn");
+//  Select Gallery display: grid or blocks.
+const gridDisplayModeBtn  = document.querySelector("#gridDisplayModeBtn");
+const flexDisplayModeBtn  = document.querySelector("#flexDisplayModeBtn");
 gridDisplayModeBtn.addEventListener("click", () => {
   const galleryDislpayTags = Array.from(document.querySelectorAll(".main__gallery__display"));
   galleryDislpayTags.forEach(element => {
@@ -85,11 +90,12 @@ flexDisplayModeBtn.addEventListener("click", () => {
   addClass(flexDisplayModeBtn, "displayModeSelected");
   removeClass(gridDisplayModeBtn, "displayModeSelected");
 })
+//  ******************************************************************************************
 //  MOBILE INTERACTIONS
-//  Hamburguer Menu:
-const openHamurger = document.querySelector("#openHamurger");
+//  Hamburguer Menu open/close elements and functions:
+const openHamurger  = document.querySelector("#openHamurger");
 const closeHamurger = document.querySelector("#closeHamurger");
-const mobileNav = document.querySelector("#mobileNav");
+const mobileNav     = document.querySelector("#mobileNav");
 const openMobileNav = () => {
   openHamurger.style.display = "none";
   closeHamurger.style.display = "block";
@@ -106,9 +112,9 @@ openHamurger.addEventListener("click", () => {
 closeHamurger.addEventListener("click", () => {
   closeMobileNav();
 })
-//  Mobile Search:
-const searchtButtonMob = document.querySelector("#searchtButtonMob");
-const searchInputMob = document.querySelector("#searchInputMob");
+//  Search elements and functions:
+const searchtButtonMob  = document.querySelector("#searchtButtonMob");
+const searchInputMob    = document.querySelector("#searchInputMob");
 searchtButtonMob.addEventListener("click", () => {
   triggerDisplayImagesDOM(searchInputMob.value, "flexGallery");
   globalQuery = searchInputMob.value;
@@ -119,5 +125,4 @@ searchtButtonMob.addEventListener("click", () => {
   });
   closeMobileNav();
 })
-
-
+//  ******************************************************************************************
