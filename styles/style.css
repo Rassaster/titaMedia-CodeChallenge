@@ -860,7 +860,7 @@ button {
     top: calc(100vw * (100 / 425));
   }
   .main__banner {
-    background: url(../assets/images/bannerLandscapeMobile-NicolasJossi.jpg) center/cover no-repeat fixed;
+    background: url(../assets/images/bannerMobile-DamienDufour.jpg) center/cover no-repeat fixed;
   }
   .main__banner__title {
     font: 700 calc(100vw * (40 / 425))/calc(100vw * (40 / 425)) "Montserrat", sans-serif;
