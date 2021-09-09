@@ -247,9 +247,10 @@
         width                 : calc(100vw * (370 / 425));
         margin                : 0 0 calc(100vw * (24 / 425)) 0;
         grid-template-rows    : repeat(7, calc(100vw * (180 / 425)));
-        gap                   : calc(100vw * (24 / 425));
+        gap                   : calc(100vw * (0 / 425));
         &__imgCtn {
           width : calc(100vw * (367 / 425));
+          margin: 0 0 calc(100vw * (24 / 425));
           h3 {
             @include typoSet ($fw-medium, $fs-maskTitleMob, $fs-maskTitleMob, $font-Mont);
             letter-spacing: $ls-maskTitleMob;

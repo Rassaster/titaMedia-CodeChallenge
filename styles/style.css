@@ -397,6 +397,7 @@ button {
 
 .header__mobileNav {
   display: none;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 425px) {
@@ -954,10 +955,11 @@ button {
     margin: 0 0 calc(100vw * (24 / 425)) 0;
     -ms-grid-rows: (calc(100vw * (180 / 425)))[7];
         grid-template-rows: repeat(7, calc(100vw * (180 / 425)));
-    gap: calc(100vw * (24 / 425));
+    gap: calc(100vw * (0 / 425));
   }
   .main__gallery__display__imgCtn {
     width: calc(100vw * (367 / 425));
+    margin: 0 0 calc(100vw * (24 / 425));
   }
   .main__gallery__display__imgCtn h3 {
     font: 700 calc(100vw * (19 / 425))/calc(100vw * (19 / 425)) "Montserrat", sans-serif;
