@@ -580,9 +580,6 @@ button {
 }
 
 .main__gallery {
-  -webkit-transition: all 0.5s linear;
-  transition: all 0.5s linear;
-  position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
@@ -593,6 +590,9 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  position: relative;
   margin: calc(100vw * (55 / 1280)) 0 0;
 }
 
@@ -645,9 +645,6 @@ button {
 }
 
 .main__gallery__mainCategories a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
@@ -658,14 +655,14 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
   height: 100%;
 }
 
 .main__gallery .flexGallery {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
@@ -676,6 +673,9 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .main__gallery .flexGallery .main__gallery__display__imgCtn {
@@ -898,7 +898,6 @@ button {
     top: calc(100vw * (285 / 425));
   }
   .main__gallery__displayModes {
-    display: none;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row nowrap;
@@ -909,6 +908,7 @@ button {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    display: none;
     margin: 0 0 calc(100vw * (40 / 425)) 0;
     width: 100vw;
   }
@@ -943,9 +943,6 @@ button {
     height: calc(100vw * (45 / 425));
   }
   .main__gallery .flexGallery, .main__gallery .gridGallery {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
@@ -956,6 +953,9 @@ button {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .main__gallery .flexGallery .main__gallery__display__imgCtn, .main__gallery .gridGallery .main__gallery__display__imgCtn {
     width: calc(100vw * (400 / 425));

@@ -1,7 +1,7 @@
-.main{
-  position: relative;
-  overflow-x: hidden;
-  top: calc(100vw * (106 / 1280));
+.main {
+  position    : relative;
+  overflow-x  : hidden;
+  top         : calc(100vw * (106 / 1280));
   &__banner {
     @include flexContainerConfig(column, nowrap, flex-start, center);
     height        : 100vh;
@@ -24,14 +24,14 @@
     }
   }
   &__gallery {
-    transition: all 0.5s linear;
-    #scrollToGallery {
-      position: absolute;
-      top: calc(100vw * (-161 / 1280));
-    }
-    position: relative;
     @include flexContainerConfig(column, nowrap, flex-start, center);
-    margin    : calc(100vw * (55 / 1280)) 0 0;
+    transition  : all 0.5s linear;
+    position    : relative;
+    margin      : calc(100vw * (55 / 1280)) 0 0;
+    #scrollToGallery {
+      position  : absolute;
+      top       : calc(100vw * (-161 / 1280));
+    }
     &__displayModes {
       @include flexContainerConfig(row, nowrap, center, center);
       margin    : 0 0 calc(100vw * (80 / 1280)) 0;
@@ -55,25 +55,24 @@
       }
     }
     &__mainCategories {
-      margin    : 0 0 calc(100vw * (60 / 1280)) 0;
+      margin  : 0 0 calc(100vw * (60 / 1280)) 0;
       a {
-        display: flex;
         @include flexContainerConfig(row, nowrap, center, center);
-        width: 100%;
-        height: 100%;
+        display : flex;
+        width   : 100%;
+        height  : 100%;
       }
     }
     .flexGallery {
-      display: flex;
       @include flexContainerConfig(column, nowrap, flex-start, center);
+      display : flex;
       .main__gallery__display__imgCtn {
-        width: calc(100vw * (900 / 1280)); 
-        height: calc(100vw * (550 / 1280)); 
-
+        width   : calc(100vw * (900 / 1280)); 
+        height  : calc(100vw * (550 / 1280)); 
       }
     }
     .gridGallery {
-      display: grid;
+      display : grid;
     }
     &__display {
       width                 : calc(100vw * (1152 / 1280));
@@ -83,12 +82,12 @@
       gap                   : calc(100vw * (24 / 1280));
       grid-auto-flow        : dense;
       &__imgCtn {
-        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
-        position: relative;
-        width : calc(100vw * (367 / 1280));
-        transition: transform 0.2s linear; 
+        box-shadow  : 0px 3px 6px rgba(0, 0, 0, 0.25);
+        position    : relative;
+        width       : calc(100vw * (367 / 1280));
+        transition  : transform 0.2s linear; 
         &:hover {
-          transform: scale(1.03);
+          transform : scale(1.03);
         }
         &:hover .main__gallery__display__imgCtn__mask {
           display : flex;
@@ -101,74 +100,73 @@
           width             : 100%;
           height            : 100%;
           background-color  : $pinkyshGray;
-          color: $mainWhite;
+          color             : $mainWhite;
           h3 {
             @include typoSet ($fw-medium, $fs-maskTitle, $fs-maskTitle, $font-Mont);
-            padding: 0 0 5%;
-            width: 80%;
-            border-bottom: 2px solid $mainWhite;
-            letter-spacing: $ls-maskTitle;
-            text-align: center;
-
+            padding         : 0 0 5%;
+            width           : 80%;
+            border-bottom   : 2px solid $mainWhite;
+            letter-spacing  : $ls-maskTitle;
+            text-align      : center;
           }
           h4 {
             @include typoSet ($fw-regular, $fs-maskCategory, $fs-maskCategory, $font-Mont);
-            padding: 5% 0 0;
-            letter-spacing: $ls-maskCategory;
+            padding         : 5% 0 0;
+            letter-spacing  : $ls-maskCategory;
           }
         }
         &__srcImg {
-          width: 100%;
-          height: 100%;
+          width   : 100%;
+          height  : 100%;
         }
         &:nth-child(1) {
-          grid-column: 1/2;
-          grid-row:span 2;
+          grid-column : 1/2;
+          grid-row    :span 2;
         }
         &:nth-child(2) {
-          grid-column: 2/3;
-          grid-row: span 1;
+          grid-column : 2/3;
+          grid-row    : span 1;
         }
         &:nth-child(3) {
-          grid-column: 3/4;
-          grid-row: span 3;
+          grid-column : 3/4;
+          grid-row    : span 3;
         }
         &:nth-child(4) {
-          grid-column: 1/2;
-          grid-row: span 3;
+          grid-column : 1/2;
+          grid-row    : span 3;
         }
         &:nth-child(5) {
-          grid-column: 2/3;
-          grid-row: span 3;
+          grid-column : 2/3;
+          grid-row    : span 3;
         }
         &:nth-child(6) {
-          grid-column: 3/4;
-          grid-row: span 1;
+          grid-column : 3/4;
+          grid-row    : span 1;
         }
         &:nth-child(7) {
-          grid-column: 1/2;
-          grid-row: span 2;
+          grid-column : 1/2;
+          grid-row    : span 2;
         }
         &:nth-child(8) {
-          grid-column: 2/3;
-          grid-row: span 3;
+          grid-column : 2/3;
+          grid-row    : span 3;
         }
         &:nth-child(9) {
-          grid-column: 3/4;
-          grid-row:  span 1;
+          grid-column : 3/4;
+          grid-row    :  span 1;
         }
         &:nth-child(10) {
-          grid-column: 3/4;
-          grid-row: span 2;
+          grid-column : 3/4;
+          grid-row    : span 2;
         }
       }
     }
   }
   &__showMore {
     @include flexContainerConfig(row, nowrap, center, center);
-    margin    :  calc(100vw * (80 / 1280)) auto;
-    font-size: $fs-showMeMoreButton;
-    letter-spacing: $ls-showMeMoreButton;
+    margin          :  calc(100vw * (80 / 1280)) auto;
+    font-size       : $fs-showMeMoreButton;
+    letter-spacing  : $ls-showMeMoreButton;
     &__button {
       color             : $mainWhite;
       background-color  : $mainPink;
@@ -182,11 +180,11 @@
 }
 // *****************************************************************************************************
 // MEDIA QUERIES
-@media screen and (max-width: 425px){
-  .main{
-    top: calc(100vw * (100 / 425));
+@media screen and (max-width: 425px) {
+  .main {
+    top : calc(100vw * (100 / 425));
     &__banner {
-      background    : url(../assets/images/bannerMobile-DamienDufour.jpg) center / cover no-repeat fixed;
+      background  : url(../assets/images/bannerMobile-DamienDufour.jpg) center / cover no-repeat fixed;
       &__title {
         @include typoSet ($fw-medium, $fs-bannerTitleMob, $fs-bannerTitleMob, $font-Mont);
         margin          : calc(100vw * (80 / 425)) 0 calc(100vw * (40 / 425));
@@ -195,8 +193,8 @@
       }
       &__text {
         @include typoSet ($fw-light, $fs-bannerTextMob, $lh-bannerTextMob, $font-Quest);
-        width: 80vw;
-        margin: 0 0 calc(100vw * (20 / 425));
+        width           : 80vw;
+        margin          : 0 0 calc(100vw * (20 / 425));
         letter-spacing  : $ls-bannerTextMob;
       }
       &__anchorBtn {
@@ -205,21 +203,21 @@
     }
     &__gallery {
       #scrollToGallery {
-        position: absolute;
-        top: calc(100vw * (285 / 425));
+        position  : absolute;
+        top       : calc(100vw * (285 / 425));
       }
       @include flexContainerConfig(column, nowrap, flex-start, center);
-      margin    : calc(100vw * (70 / 425)) 0 0;
+      margin  : calc(100vw * (70 / 425)) 0 0;
       &__displayModes {
-        display: none;
         @include flexContainerConfig(row, nowrap, center, center);
+        display   : none;
         margin    : 0 0 calc(100vw * (40 / 425)) 0;
         width     : 100vw;
         .displayMode {
-          margin        : 0 calc(100vw * (12 / 425));
-          width         : calc(100vw * (14 / 425));
-          height        : calc(100vw * (14 / 425));
-          filter: grayscale(100%);
+          margin  : 0 calc(100vw * (12 / 425));
+          width   : calc(100vw * (14 / 425));
+          height  : calc(100vw * (14 / 425));
+          filter  : grayscale(100%);
         }
         &__gridMode {
           background : url(../assets/controls/gridIcon.png) center / cover no-repeat;
@@ -230,45 +228,44 @@
       }
       &__mainCategories {
         @include flexContainerConfig(column, nowrap, flex-start, center);
-        margin    : 0 0 calc(100vw * (60 / 425)) 0;
+        margin  : 0 0 calc(100vw * (60 / 425)) 0;
         .mainCategory {
-          border: unset;
-          height: calc(100vw * (45 / 425));
+          border  : unset;
+          height  : calc(100vw * (45 / 425));
         }
       }
       .flexGallery, .gridGallery {
-        display: flex;
         @include flexContainerConfig(column, nowrap, flex-start, center);
+        display : flex;
         .main__gallery__display__imgCtn {
-          width: calc(100vw * (400 / 425)); 
-          height: calc(100vw * (550 / 425)); 
+          width   : calc(100vw * (400 / 425)); 
+          height  : calc(100vw * (550 / 425)); 
         }
       }
       &__display {
-        display: flex;
+        display               : flex;
         width                 : calc(100vw * (370 / 425));
         margin                : 0 0 calc(100vw * (24 / 425)) 0;
         grid-template-rows    : repeat(7, calc(100vw * (180 / 425)));
         gap                   : calc(100vw * (0 / 425));
         &__imgCtn {
-          width : calc(100vw * (367 / 425));
-          margin: 0 0 calc(100vw * (24 / 425));
+          width   : calc(100vw * (367 / 425));
+          margin  : 0 0 calc(100vw * (24 / 425));
           h3 {
             @include typoSet ($fw-medium, $fs-maskTitleMob, $fs-maskTitleMob, $font-Mont);
-            letter-spacing: $ls-maskTitleMob;
-
+            letter-spacing  : $ls-maskTitleMob;
           }
           h4 {
             @include typoSet ($fw-regular, $fs-maskCategoryMob, $fs-maskCategoryMob, $font-Mont);
-            letter-spacing: $ls-maskCategoryMob;
+            letter-spacing  : $ls-maskCategoryMob;
           }
         }
       }
     }
     &__showMore {
-      margin    :  calc(100vw * (20 / 425)) 0 calc(100vw * (60 / 425));
-      font-size: $fs-showMeMoreButtonMob;
-      letter-spacing: $ls-showMeMoreButtonMob;
+      margin          :  calc(100vw * (20 / 425)) 0 calc(100vw * (60 / 425));
+      font-size       : $fs-showMeMoreButtonMob;
+      letter-spacing  : $ls-showMeMoreButtonMob;
       &__button {
         color             : $mainWhite;
         background-color  : $mainPink;
