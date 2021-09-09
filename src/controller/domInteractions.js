@@ -119,7 +119,7 @@ searchtButtonMob.addEventListener("click", () => {
   triggerDisplayImagesDOM(searchInputMob.value, "flexGallery");
   globalQuery = searchInputMob.value;
   globalPage = 1;
-  window.scrollTo( 0, 1000);
+  window.scrollTo(0, 900);
   mainCategoriesTags.forEach(element => {
     removeClass(element, "mainCategoriesQueriesSelected");
   });
