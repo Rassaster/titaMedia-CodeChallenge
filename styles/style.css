@@ -1000,8 +1000,6 @@ button {
 }
 
 .footer {
-  position: relative;
-  top: calc(100vw * (106 / 1280));
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
@@ -1012,6 +1010,8 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  top: calc(100vw * (106 / 1280));
 }
 
 .footer__copyright {
@@ -1074,8 +1074,6 @@ button {
 
 @media screen and (max-width: 425px) {
   .footer {
-    top: calc(100vw * (100 / 425));
-    margin: 0 0 calc(100vw * (100 / 425));
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
@@ -1086,6 +1084,8 @@ button {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    top: calc(100vw * (100 / 425));
+    margin: 0 0 calc(100vw * (100 / 425));
   }
   .footer__copyright__text {
     font: 400 calc(100vw * (13 / 425))/calc(100vw * (13 / 425)) "Questrial", sans-serif;
@@ -1096,7 +1096,6 @@ button {
     color: #ff5672;
   }
   .footer__socialMedia {
-    margin: 0 0 calc(100vw * (50 / 425));
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row nowrap;
@@ -1107,6 +1106,7 @@ button {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin: 0 0 calc(100vw * (50 / 425));
   }
   .footer__socialMedia__logoLink {
     margin: 0 calc(100vw * (10 / 425));
