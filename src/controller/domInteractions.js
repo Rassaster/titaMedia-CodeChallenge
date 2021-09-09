@@ -44,7 +44,7 @@ searchDesktop.addEventListener("mouseleave", () => {
 })
 searchInputDesktop.addEventListener("keypress", (e) => {
   if(e.key === "Enter") {
-    triggerDisplayImagesDOM(searchInputDesktop.value);
+    triggerDisplayImagesDOM(searchInputDesktop.value, globalGalleryDisplay);
     globalQuery = searchInputDesktop.value;
     globalPage = 1;
     window.scrollTo(0, 690);
@@ -54,7 +54,7 @@ searchInputDesktop.addEventListener("keypress", (e) => {
   }
 })
 searchtButtonDesktop.addEventListener("click", () => {
-  triggerDisplayImagesDOM(searchInputDesktop.value);
+  triggerDisplayImagesDOM(searchInputDesktop.value, globalGalleryDisplay);
   globalQuery = searchInputDesktop.value;
   globalPage = 1;
   window.scrollTo( 0, 690);
