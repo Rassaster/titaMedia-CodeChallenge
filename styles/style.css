@@ -959,7 +959,7 @@ button {
   }
   .main__gallery .flexGallery .main__gallery__display__imgCtn, .main__gallery .gridGallery .main__gallery__display__imgCtn {
     width: calc(100vw * (400 / 425));
-    height: calc(100vw * (550 / 425));
+    height: calc(100vw * (300 / 425));
   }
   .main__gallery__display {
     display: -webkit-box;
