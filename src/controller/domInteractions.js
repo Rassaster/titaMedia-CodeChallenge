@@ -15,73 +15,19 @@ document.addEventListener("click", e => {
     let localQuery = e.target.innerText;
     mainCategoriesTags.forEach(element => {
       removeClass(element, "mainCategoriesQueriesSelected");
+      if (element.innerHTML === localQuery) {
+        addClass(element, "mainCategoriesQueriesSelected");
+      }
     });
-    switch (localQuery) {
-      case "All":
-        triggerDisplayImagesDOM(localQuery);
-        mainCategoriesTags.forEach(element => {
-          if (element.innerHTML === localQuery) {
-            addClass(element, "mainCategoriesQueriesSelected");
-          }
-        })
-        globalQuery = localQuery;
-        globalPage = 1;
-        closeMobileNav();
-        break;
-        case "Branding":
-          triggerDisplayImagesDOM(localQuery);
-          mainCategoriesTags.forEach(element => {
-            if (element.innerHTML === localQuery) {
-              addClass(element, "mainCategoriesQueriesSelected");
-            }
-          })
-          globalQuery = localQuery;
-          globalPage = 1;
-          closeMobileNav();
-        break;
-      case "Web":
-        triggerDisplayImagesDOM(localQuery);
-        mainCategoriesTags.forEach(element => {
-          if (element.innerHTML === localQuery) {
-            addClass(element, "mainCategoriesQueriesSelected");
-          }
-        })
-        globalQuery = localQuery;
-        globalPage = 1;
-        closeMobileNav();
-        break;
-      case "Photography":
-        triggerDisplayImagesDOM(localQuery);
-        mainCategoriesTags.forEach(element => {
-          if (element.innerHTML === localQuery) {
-            addClass(element, "mainCategoriesQueriesSelected");
-          }
-        })
-        globalQuery = localQuery;
-        globalPage = 1;
-        closeMobileNav();
-        break;
-      case "App":
-        triggerDisplayImagesDOM(localQuery);
-        mainCategoriesTags.forEach(element => {
-          if (element.innerHTML === localQuery) {
-            addClass(element, "mainCategoriesQueriesSelected");
-          }
-        })
-        globalQuery = localQuery;
-        globalPage = 1;
-        closeMobileNav();
-        break;
-      default:
-      break;
-    }
+    triggerDisplayImagesDOM(localQuery);
+    globalQuery = localQuery;
+    globalPage = 1;
+    e.target.classList[1] === "mobileAnchor" ? closeMobileNav() : null;
   }
 })
-
 showMeMoreBtn.addEventListener("click", () => {
   globalPage++;
   triggerShowMoreImagesDOM(globalQuery, globalPage);
-
 })
 //  Desktop Interactions
 const searchDesktop = document.querySelector("#searchDesktop");
@@ -95,13 +41,12 @@ searchDesktop.addEventListener("mouseleave", () => {
   searchInputDesktop.style.width = "0";
   searchInputDesktop.style.borderWidth = "0";
 })
-
 searchInputDesktop.addEventListener("keypress", (e) => {
   if(e.key === "Enter") {
     triggerDisplayImagesDOM(searchInputDesktop.value);
     globalQuery = searchInputDesktop.value;
     globalPage = 1;
-    window.scrollTo( 0, 690);
+    window.scrollTo(0, 690);
     mainCategoriesTags.forEach(element => {
       removeClass(element, "mainCategoriesQueriesSelected");
     });
