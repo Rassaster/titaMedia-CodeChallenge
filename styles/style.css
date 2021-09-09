@@ -893,6 +893,7 @@ button {
     top: calc(100vw * (285 / 425));
   }
   .main__gallery__displayModes {
+    display: none;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row nowrap;

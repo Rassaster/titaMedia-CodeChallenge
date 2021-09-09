@@ -211,6 +211,7 @@
       @include flexContainerConfig(column, nowrap, flex-start, center);
       margin    : calc(100vw * (70 / 425)) 0 0;
       &__displayModes {
+        display: none;
         @include flexContainerConfig(row, nowrap, center, center);
         margin    : 0 0 calc(100vw * (40 / 425)) 0;
         width     : 100vw;
