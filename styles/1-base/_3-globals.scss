@@ -14,6 +14,7 @@
 };
 body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 };
 a {
   text-decoration: none;
@@ -92,6 +93,7 @@ button {
 // *****************************************************************************************************
 // MEDIA QUERIES
 @media screen and (max-width: 425px) {
+
   .mainCategoriesQueries {
     @include flexContainerConfig(row, nowrap, space-between, center);
     @include typoSet ($fw-regular, $fs-categoriesMob, $fs-categoriesMob, $font-Quest); 
