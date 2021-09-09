@@ -528,6 +528,8 @@ button {
     height: calc(100vw * (30 / 425));
     text-align: center;
     background-color: rgba(255, 255, 255, 0.3);
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
   .header__mobileNav .mainCategoriesQueries .search__input:focus {
     outline: none;
