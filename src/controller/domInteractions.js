@@ -5,6 +5,7 @@ import { addClass, removeClass } from "./../model/helpers.js";
 //  Global Variables 
 let globalQuery = "All";
 let globalPage = 1;
+let globalGalleryDisplay = "gridGallery";
 
 //  Global DOM Elements
 const showMeMoreBtn = document.querySelector("#showMeMoreBtn");
@@ -19,7 +20,7 @@ document.addEventListener("click", e => {
         addClass(element, "mainCategoriesQueriesSelected");
       }
     });
-    triggerDisplayImagesDOM(localQuery);
+    triggerDisplayImagesDOM(localQuery, globalGalleryDisplay);
     globalQuery = localQuery;
     globalPage = 1;
     e.target.classList[1] === "mobileAnchor" ? closeMobileNav() : null;
@@ -27,7 +28,7 @@ document.addEventListener("click", e => {
 })
 showMeMoreBtn.addEventListener("click", () => {
   globalPage++;
-  triggerShowMoreImagesDOM(globalQuery, globalPage);
+  triggerShowMoreImagesDOM(globalQuery, globalPage, globalGalleryDisplay);
 })
 //  DESKTOP INTERACTIONS
 const searchDesktop = document.querySelector("#searchDesktop");
@@ -70,6 +71,7 @@ gridDisplayModeBtn.addEventListener("click", () => {
     addClass(element, "gridGallery");
     removeClass(element, "flexGallery");
   })
+  globalGalleryDisplay = "gridGallery";
   addClass(gridDisplayModeBtn, "displayModeSelected");
   removeClass(flexDisplayModeBtn, "displayModeSelected");
 })
@@ -79,6 +81,7 @@ flexDisplayModeBtn.addEventListener("click", () => {
     addClass(element, "flexGallery");
     removeClass(element, "gridGallery");
   })
+  globalGalleryDisplay = "flexGallery";
   addClass(flexDisplayModeBtn, "displayModeSelected");
   removeClass(gridDisplayModeBtn, "displayModeSelected");
 })
@@ -107,7 +110,7 @@ closeHamurger.addEventListener("click", () => {
 const searchtButtonMob = document.querySelector("#searchtButtonMob");
 const searchInputMob = document.querySelector("#searchInputMob");
 searchtButtonMob.addEventListener("click", () => {
-  triggerDisplayImagesDOM(searchInputMob.value);
+  triggerDisplayImagesDOM(searchInputMob.value, "flexGallery");
   globalQuery = searchInputMob.value;
   globalPage = 1;
   window.scrollTo( 0, 1000);

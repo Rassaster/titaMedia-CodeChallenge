@@ -35,13 +35,13 @@ export const onLoadDisplayImagesDOM = () => {
       galleryContainer.appendChild(galleryDislpay);
     })
 }
-export const triggerDisplayImagesDOM = (query) => {
+export const triggerDisplayImagesDOM = (query, displayMode) => {
   unsplash_triggerSearch(query, 1, 10)
   .then(imgs => {
     galleryContainer.innerHTML = ""; 
     let galleryDislpay = document.createElement("div");
     galleryDislpay.classList.add("main__gallery__display");
-    galleryDislpay.classList.add("gridGallery");
+    galleryDislpay.classList.add(displayMode);
     for (let i = 0; i < imgs.length; i++) {
       let imageElement = document.createElement("div");
       imageElement.classList.add(`main__gallery__display__imgCtn`);
@@ -70,12 +70,12 @@ export const triggerDisplayImagesDOM = (query) => {
     galleryContainer.appendChild(galleryDislpay);
   })
 }
-export const triggerShowMoreImagesDOM = (query, page) => {
+export const triggerShowMoreImagesDOM = (query, page, displayMode) => {
   unsplash_triggerSearch(query, page, 10)
   .then(imgs => {
     let galleryDislpay = document.createElement("div");
     galleryDislpay.classList.add("main__gallery__display");
-    galleryDislpay.classList.add("gridGallery");
+    galleryDislpay.classList.add(displayMode);
     for (let i = 0; i < imgs.length; i++) {
       let imageElement = document.createElement("div");
       imageElement.classList.add(`main__gallery__display__imgCtn`);
