@@ -183,6 +183,11 @@ button {
           transform: scale(1.1);
 }
 
+.displayModeSelected {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
 @media screen and (max-width: 425px) {
   .mainCategoriesQueries {
     -webkit-box-orient: horizontal;

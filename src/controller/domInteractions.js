@@ -66,11 +66,12 @@ const gridDisplayModeBtn = document.querySelector("#gridDisplayModeBtn");
 const flexDisplayModeBtn = document.querySelector("#flexDisplayModeBtn");
 gridDisplayModeBtn.addEventListener("click", () => {
   const galleryDislpayTags = Array.from(document.querySelectorAll(".main__gallery__display"));
-  lg(galleryDislpayTags);
   galleryDislpayTags.forEach(element => {
     addClass(element, "gridGallery");
     removeClass(element, "flexGallery");
   })
+  addClass(gridDisplayModeBtn, "displayModeSelected");
+  removeClass(flexDisplayModeBtn, "displayModeSelected");
 })
 flexDisplayModeBtn.addEventListener("click", () => {
   const galleryDislpayTags = Array.from(document.querySelectorAll(".main__gallery__display"));
@@ -78,6 +79,8 @@ flexDisplayModeBtn.addEventListener("click", () => {
     addClass(element, "flexGallery");
     removeClass(element, "gridGallery");
   })
+  addClass(flexDisplayModeBtn, "displayModeSelected");
+  removeClass(gridDisplayModeBtn, "displayModeSelected");
 })
 //  MOBILE INTERACTIONS
 //  Hamburguer Menu:
