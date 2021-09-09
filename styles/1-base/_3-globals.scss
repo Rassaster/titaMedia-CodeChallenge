@@ -1,44 +1,43 @@
 * {
-  box-sizing: border-box;
-  cursor: default;
-  scrollbar-width: none;
+  box-sizing        : border-box;
+  cursor            : default;
+  scrollbar-width   : none;
   /* Hide scrollbar for Chrome, Safari and Opera */
   &::-webkit-scrollbar {
-    display: none;
-    // overflow-y: hidden;
+    display : none;
   }
   /* Hide scrollbar for IE, Edge and Firefox */
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-  scroll-behavior: smooth;
+  -ms-overflow-style  : none;  /* IE and Edge */
+  scrollbar-width     : none;  /* Firefox */
+  scroll-behavior     : smooth;
 };
 body {
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+  overflow-x      : hidden;
+  scroll-behavior : smooth;
 };
 a {
-  text-decoration: none;
-  color: unset;
+  text-decoration : none;
+  color           : unset;
   &:visited {
-    color: unset;
+    color : unset;
   };
 };
 button {
-  background-color: unset;
-  border: unset;
+  background-color  : unset;
+  border            : unset;
 }
 
 .flexCtn {
-  display: flex;
+  display : flex;
 };
 .gridCtn {
-  display: grid;
+  display : grid;
 }
 .displayNone {
-  display: none;
+  display : none;
 }
 .visibilityHidden {
-  visibility: hidden;
+  visibility  : hidden;
 }
 
 .mainCategoriesQueries {
@@ -46,31 +45,31 @@ button {
   @include typoSet ($fw-regular, $fs-categories, $fs-categories, $font-Quest); 
   .mainCategory {
     @include flexContainerConfig(row, nowrap, center, center);
-    margin: 0 0.5%;
-    width: calc(100vw * (106 / 1280));
-    height: calc(100vw * (42 / 1280));
-    color: $mainGray;
-    background-color: $mainWhite;
-    transition: all 0.2s linear;
+    margin            : 0 0.5%;
+    width             : calc(100vw * (106 / 1280));
+    height            : calc(100vw * (42 / 1280));
+    color             : $mainGray;
+    background-color  : $mainWhite;
+    transition        : all 0.2s linear;
     &:hover {
-      color: $mainWhite;
-      background-color: $mainPink;
-      cursor: pointer;
+      color             : $mainWhite;
+      background-color  : $mainPink;
+      cursor            : pointer;
       a {
-        cursor: pointer;
+        cursor          : pointer;
       }
     }
   }
 }
 .mainCategoriesQueriesSelected {
-  transform: scale(1.04);
-  background-color: $mainPink;
+  transform         : scale(1.04);
+  background-color  : $mainPink;
   &:visited {
-    color: $mainWhite;
+    color : $mainWhite;
   }
 }
 .trigFetch {
-  transition: all 0.2s ease;
+  transition  : all 0.2s ease;
 }
 .button {
   @include flexContainerConfig(column, nowrap, center, center);
@@ -91,7 +90,7 @@ button {
   }
 }
 .displayModeSelected {
-  transform: scale(1.5);
+  transform : scale(1.5);
 }
 // *****************************************************************************************************
 // MEDIA QUERIES
@@ -102,23 +101,23 @@ button {
     @include typoSet ($fw-regular, $fs-categoriesMob, $fs-categoriesMob, $font-Quest); 
     .mainCategory {
       @include flexContainerConfig(row, nowrap, center, center);
-      margin: calc(100vw * (20 / 425)) 0 0;
-      border-bottom: 2px solid $mainPink;
-      width: 50vw;
-      height: calc(100vw * (42 / 425));
-      color: $mainGray;
-      background-color: rgba(255, 255, 255, 0.3);
-      transition: all 0.2s linear;
+      margin            : calc(100vw * (20 / 425)) 0 0;
+      border-bottom     : 2px solid $mainPink;
+      width             : 50vw;
+      height            : calc(100vw * (42 / 425));
+      color             : $mainGray;
+      background-color  : rgba(255, 255, 255, 0.3);
+      transition        : all 0.2s linear;
       &:hover {
-        color: $mainWhite;
-        background-color: $mainPink;
-        cursor: pointer;
+        color             : $mainWhite;
+        background-color  : $mainPink;
+        cursor            : pointer;
       }
     }
   }
   .mainCategoriesQueriesSelected {
-    transform: scale(1.1);
-    border: 1px solid $mainPink;
+    transform   : scale(1.1);
+    border      : 1px solid $mainPink;
   }
   .button {
     @include flexContainerConfig(column, nowrap, center, center);
